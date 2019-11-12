@@ -6,8 +6,10 @@ import axios from 'axios';
   COMPONENTS
 ***************************************/
 const Movie = (props) => {
+  /// states ///
   const [movie , setMovie] = React.useState ();
- 
+
+  /// effects ///
   React.useEffect (() => {
     const id = 1;
     // change ^^^ that line and grab the id from the URL
@@ -35,6 +37,8 @@ const Movie = (props) => {
   }
 
   const { title , director , metascore , stars } = movie;
+  
+  /// this ///
   return (
     <div className="save-wrapper">
       <div className="movie-card">

@@ -5,8 +5,14 @@ import axios from 'axios';
 /***************************************
   COMPONENTS
 ***************************************/
+/*------------------
+  MovieList (main)
+------------------*/
 const MovieList = (props) => {
-  const [movies , setMovies] = React.useState ([])
+  /// state ///
+  const [movies , setMovies] = React.useState ([]);
+  
+  /// effects ///
   React.useEffect (() => {
     const getMovies = () => {
       axios
@@ -22,6 +28,7 @@ const MovieList = (props) => {
     getMovies ();
   } , []);
   
+  /// thing ///
   return (
     <div className="movie-list">
       {movies.map (movie => (
@@ -31,8 +38,14 @@ const MovieList = (props) => {
   );
 }
 
+/*------------------
+  MovieDetails
+------------------*/
 function MovieDetails ({ movie }) {
+  /// states ///
   const { title , director , metascore , stars } = movie;
+  
+  /// this ///
   return (
     <div className="movie-card">
       <h2>{title}</h2>

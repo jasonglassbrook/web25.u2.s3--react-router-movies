@@ -11,12 +11,15 @@ import Movie from './Movies/Movie';
   COMPONENTS
 ***************************************/
 const App = () => {
+  /// states ///
   const [savedList , setSavedList] = React.useState ([]);
 
+  /// effects ///
   const addToSavedList = (movie) => {
     setSavedList ([...savedList , movie]);
   };
 
+  /// this ///
   return (
     <div>
       <SavedList list={savedList} />
