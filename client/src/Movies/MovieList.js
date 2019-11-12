@@ -1,38 +1,38 @@
 /// external modules ///
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 /***************************************
   COMPONENTS
 ***************************************/
-const MovieList = props => {
-  const [movies, setMovies] = useState([])
-  useEffect(() => {
+const MovieList = (props) => {
+  const [movies , setMovies] = React.useState ([])
+  React.useEffect (() => {
     const getMovies = () => {
       axios
-        .get('http://localhost:5000/api/movies')
-        .then(response => {
-          setMovies(response.data);
+        .get ('http://localhost:5000/api/movies')
+        .then (response => {
+          setMovies (response.data);
         })
-        .catch(error => {
-          console.error('Server Error', error);
+        .catch (error => {
+          console.error ('Server Error' , error);
         });
     }
     
-    getMovies();
-  }, []);
+    getMovies ();
+  } , []);
   
   return (
     <div className="movie-list">
-      {movies.map(movie => (
+      {movies.map (movie => (
         <MovieDetails key={movie.id} movie={movie} />
       ))}
     </div>
   );
 }
 
-function MovieDetails({ movie }) {
-  const { title, director, metascore, stars } = movie;
+function MovieDetails ({ movie }) {
+  const { title , director , metascore , stars } = movie;
   return (
     <div className="movie-card">
       <h2>{title}</h2>
@@ -44,7 +44,7 @@ function MovieDetails({ movie }) {
       </div>
       <h3>Actors</h3>
 
-      {stars.map(star => (
+      {stars.map (star => (
         <div key={star} className="movie-star">
           {star}
         </div>

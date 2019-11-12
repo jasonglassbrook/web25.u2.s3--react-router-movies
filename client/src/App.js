@@ -1,5 +1,5 @@
 /// external modules ///
-import React, { useState } from 'react';
+import React from 'react';
 
 /// internal modules ///
 import SavedList from './Movies/SavedList';
@@ -8,10 +8,10 @@ import SavedList from './Movies/SavedList';
   COMPONENTS
 ***************************************/
 const App = () => {
-  const [savedList, setSavedList] = useState( [] );
+  const [savedList , setSavedList] = React.useState ([]);
 
-  const addToSavedList = movie => {
-    setSavedList( [...savedList, movie] );
+  const addToSavedList = (movie) => {
+    setSavedList ([...savedList , movie]);
   };
 
   return (

@@ -4,7 +4,7 @@ import React from 'react';
 /***************************************
   COMPONENTS
 ***************************************/
-const MovieCard = props => {
+const MovieCard = (props) => {
   return;
 };
 
