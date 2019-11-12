@@ -1,5 +1,6 @@
 /// external modules ///
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /***************************************
   COMPONENTS
@@ -12,7 +13,7 @@ const SavedList = (props) => {
       {props.list.map ((movie) => (
         <span className="saved-movie">{movie.title}</span>
       ))}
-      <div className="home-button">Home</div>
+      <Link className="home-button" to='/'>Home</Link>
     </div>
   );
 };
