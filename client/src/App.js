@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 /// internal modules ///
 import SavedList from './Movies/SavedList';
-import MovieList from './Movies/MovieList';
+import MoviesList from './Movies/MoviesList';
 import Movie from './Movies/Movie';
 
 /***************************************
@@ -26,7 +26,7 @@ const App = (props) => {
       <Route
         exact path='/'
         render={(props) => (
-          <MovieList {...props}/>
+          <MoviesList {...props}/>
         )}
       />
       <Route

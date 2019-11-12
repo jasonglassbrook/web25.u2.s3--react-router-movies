@@ -9,7 +9,7 @@ import MovieCard from './MovieCard';
 /***************************************
   COMPONENTS
 ***************************************/
-const MovieList = (props) => {
+const MoviesList = (props) => {
   /// state ///
   const [movies , setMovies] = React.useState ([]);
   
@@ -42,4 +42,4 @@ const MovieList = (props) => {
 }
 
 /**************************************/
-export default MovieList;
+export default MoviesList;
