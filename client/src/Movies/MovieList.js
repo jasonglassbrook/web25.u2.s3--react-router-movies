@@ -17,10 +17,10 @@ const MovieList = (props) => {
     const getMovies = () => {
       axios
         .get ('http://localhost:5000/api/movies')
-        .then (response => {
+        .then ((response) => {
           setMovies (response.data);
         })
-        .catch (error => {
+        .catch ((error) => {
           console.error ('Server Error' , error);
         });
     }
@@ -31,7 +31,7 @@ const MovieList = (props) => {
   /// thing ///
   return (
     <div className="movie-list">
-      {movies.map (movie => (
+      {movies.map ((movie) => (
         <MovieDetails key={movie.id} movie={movie} />
       ))}
     </div>
@@ -57,7 +57,7 @@ function MovieDetails ({ movie }) {
       </div>
       <h3>Actors</h3>
 
-      {stars.map (star => (
+      {stars.map ((star) => (
         <div key={star} className="movie-star">
           {star}
         </div>

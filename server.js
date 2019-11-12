@@ -57,7 +57,7 @@ app.get ('/api/movies' , (req , res) => {
 });
 
 app.get ('/api/movies/:id' , (req , res) => {
-	const movie = movies.filter (movie => movie.id.toString () === req.params.id)[0];
+	const movie = movies.filter ((movie) => movie.id.toString () === req.params.id)[0];
 	res.status (200).json (movie);
 });
 
