@@ -3,12 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+/// internal modules ///
+import MovieCard from './MovieCard';
+
 /***************************************
   COMPONENTS
 ***************************************/
-/*------------------
-  MovieList (main)
-------------------*/
 const MovieList = (props) => {
   /// state ///
   const [movies , setMovies] = React.useState ([]);
@@ -34,36 +34,8 @@ const MovieList = (props) => {
     <div className="movie-list">
       {movies.map ((movie) => (
         <Link to={`/movies/${movie.id}`}>
-          <MovieDetails key={movie.id} movie={movie}/>
+          <MovieCard key={movie.id} movie={movie}/>
         </Link>
-      ))}
-    </div>
-  );
-}
-
-/*------------------
-  MovieDetails
-------------------*/
-function MovieDetails ({ movie }) {
-  /// states ///
-  const { title , director , metascore , stars } = movie;
-  
-  /// this ///
-  return (
-    <div className="movie-card">
-      <h2>{title}</h2>
-      <div className="movie-director">
-        Director: <em>{director}</em>
-      </div>
-      <div className="movie-metascore">
-        Metascore: <strong>{metascore}</strong>
-      </div>
-      <h3>Actors</h3>
-
-      {stars.map ((star) => (
-        <div key={star} className="movie-star">
-          {star}
-        </div>
       ))}
     </div>
   );

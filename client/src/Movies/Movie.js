@@ -2,6 +2,9 @@
 import React from 'react';
 import axios from 'axios';
 
+/// internal modules ///
+import MovieCard from './MovieCard';
+
 /***************************************
   COMPONENTS
 ***************************************/
@@ -28,34 +31,19 @@ const Movie = (props) => {
   //   addToSavedList (movie)
   // }
 
-  if (movie === undefined) {
-    return <div>Loading movie information...</div>;
-  }
-
-  const { title , director , metascore , stars } = movie;
-  
   /// this ///
-  return (
-    <div className="save-wrapper">
-      <div className="movie-card">
-        <h2>{title}</h2>
-        <div className="movie-director">
-          Director: <em>{director}</em>
-        </div>
-        <div className="movie-metascore">
-          Metascore: <strong>{metascore}</strong>
-        </div>
-        <h3>Actors</h3>
-
-        {stars.map ((star) => (
-          <div key={star} className="movie-star">
-            {star}
-          </div>
-        ))}
+  if (movie === undefined) {
+    return (
+      <div className="loading">Loading movie information...</div>
+    );
+  } else {
+    return (
+      <div className="save-wrapper">
+        <MovieCard movie={movie}/>
+        <div className="save-button">Save</div>
       </div>
-      <div className="save-button">Save</div>
-    </div>
-  );
+    );
+  }
 }
 
 /**************************************/
