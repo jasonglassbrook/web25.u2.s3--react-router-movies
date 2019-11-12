@@ -10,7 +10,7 @@ import Movie from './Movies/Movie';
 /***************************************
   COMPONENTS
 ***************************************/
-const App = () => {
+const App = (props) => {
   /// states ///
   const [savedList , setSavedList] = React.useState ([]);
 
