@@ -1,6 +1,10 @@
+/// external modules ///
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+/***************************************
+  COMPONENTS
+***************************************/
 const Movie = (props) => {
   const [movie, setMovie] = useState();
  
@@ -54,4 +58,5 @@ const Movie = (props) => {
   );
 }
 
+/**************************************/
 export default Movie;

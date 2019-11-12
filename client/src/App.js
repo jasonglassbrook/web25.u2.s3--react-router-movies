@@ -1,7 +1,12 @@
+/// external modules ///
 import React, { useState } from 'react';
 
+/// internal modules ///
 import SavedList from './Movies/SavedList';
 
+/***************************************
+  COMPONENTS
+***************************************/
 const App = () => {
   const [savedList, setSavedList] = useState( [] );
 
@@ -17,4 +22,5 @@ const App = () => {
   );
 };
 
+/**************************************/
 export default App;

@@ -1,6 +1,10 @@
+/// external modules ///
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+/***************************************
+  COMPONENTS
+***************************************/
 const MovieList = props => {
   const [movies, setMovies] = useState([])
   useEffect(() => {
@@ -49,4 +53,5 @@ function MovieDetails({ movie }) {
   );
 }
 
+/**************************************/
 export default MovieList;

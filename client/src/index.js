@@ -1,7 +1,14 @@
+/// external modules ///
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
+/// internal modules ///
 import App from './App';
 
+/// styles ///
+import './index.css';
+
+/***************************************
+  APP
+***************************************/
 ReactDOM.render(<App />, document.getElementById('root'));

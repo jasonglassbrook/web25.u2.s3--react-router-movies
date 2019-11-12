@@ -1,5 +1,9 @@
+/// external modules ///
 import React from 'react';
 
+/***************************************
+  COMPONENTS
+***************************************/
 const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
@@ -10,4 +14,5 @@ const SavedList = props => (
   </div>
 );
 
+/**************************************/
 export default SavedList;
