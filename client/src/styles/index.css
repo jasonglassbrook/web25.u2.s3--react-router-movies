@@ -40,7 +40,7 @@ a:hover , a:active {
   margin: 0px 10px;
 }
 
-.button {
+button {
   border: 1px solid Black;
   padding: 5px 10px;
 
@@ -48,7 +48,7 @@ a:hover , a:active {
   transition: transform 0.2s;
 }
 
-.button:hover , button:active {
+button:hover , button:active {
   transform: scale(1.05);
 }
 
@@ -57,7 +57,7 @@ a:hover , a:active {
 }
 
 .home-button:hover , .home-button:active {
-  background-color: DodgerBlue;
+  background-color: DeepSkyBlue;
 }
 
 .view-button {
@@ -65,15 +65,15 @@ a:hover , a:active {
 }
 
 .view-button:hover , .view-button:active {
-  background-color: Coral;
+  background-color: OrangeRed;
 }
 
 .save-button {
-  background-color: LightSeaGreen;
+  background-color: LightGreen;
 }
 
 .save-button:hover , .save-button:active {
-  background-color: ForestGreen;
+  background-color: MediumSeaGreen;
 }
 
 /***************************************
