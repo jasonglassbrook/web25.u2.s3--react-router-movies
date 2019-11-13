@@ -18,11 +18,11 @@ const MovieCard = (props) => {
   return (
     <div className="movie-card wrapper">
       <ButtonsGroup className="movie-card">
-        {(buttons.view.use)
+        {(buttons && buttons.view && buttons.view.use)
           ? (<LinkButton className="view-button" to={buttons.view.url}>View</LinkButton>)
           : (<></>)
         }
-        {(buttons.save.use)
+        {(buttons && buttons.save && buttons.save.use)
           ? (<Button className="save-button" onClick={buttons.save.onClick}>Save</Button>)
           : (<></>)
         }
