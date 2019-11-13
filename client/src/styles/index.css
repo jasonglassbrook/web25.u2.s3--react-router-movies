@@ -117,8 +117,8 @@ button:hover , button:active {
 
 .saved-movies.list {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  /* justify-content: space-between; */
 }
 
 .saved-movie {
