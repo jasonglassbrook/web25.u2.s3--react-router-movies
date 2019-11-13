@@ -39,8 +39,15 @@ a:hover , a:active {
 .buttons-group > * {
   margin: 0px 10px;
 }
+.buttons-group > *:first-child {
+  margin-left: 0px;
+}
+.buttons-group > *:last-child {
+  margin-right: 0px;
+}
 
 button {
+  border-radius: 9999px;
   border: 1px solid Black;
   padding: 5px 10px;
 
