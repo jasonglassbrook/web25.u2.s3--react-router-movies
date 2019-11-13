@@ -36,20 +36,40 @@ a:hover , a:active {
   align-items: stretch;
 }
 
-.save-button {
-  border: 1px solid grey;
+.button {
+  border: 1px solid Black;
   padding: 5px 10px;
-  background-color: lightseagreen;
+
+  color: Black;
+  transition: transform 0.2s;
 }
 
-.save-button:hover {
-  background-color: green;
-  color: white;
+.button:hover , button:active {
+  transform: scale(1.05);
 }
 
 .home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
+  background-color: LightSkyBlue;
+}
+
+.home-button:hover , .home-button:active {
+  background-color: DodgerBlue;
+}
+
+.view-button {
+  background-color: LightCoral;
+}
+
+.view-button:hover , .view-button:active {
+  background-color: Coral;
+}
+
+.save-button {
+  background-color: LightSeaGreen;
+}
+
+.save-button:hover , .save-button:active {
+  background-color: ForestGreen;
 }
 
 /***************************************
