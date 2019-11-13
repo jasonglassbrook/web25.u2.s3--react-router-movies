@@ -10,7 +10,7 @@ import MovieCard from './MovieCard';
 ***************************************/
 const Movie = (props) => {
   /// states ///
-  const [id , setId] = React.useState (props.match.params["id"]);
+  const [id] = React.useState (props.match.params["id"]);
   const [movie , setMovie] = React.useState ();
 
   /// effects ///
