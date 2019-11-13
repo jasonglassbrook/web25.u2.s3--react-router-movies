@@ -11,7 +11,7 @@ import Button from './Button';
 const LinkButton = (props) => {
   /// this ///
   return (
-    <Link {...props}>
+    <Link to={props.to} replace={props.replace}>
       <Button {...props}>{props.children}</Button>
     </Link>
   );
