@@ -1,3 +1,11 @@
+* , *:before , *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,8 +36,8 @@ a:hover , a:active {
 
 .buttons-group {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
 
   display: flex;
   flex-direction: row;
@@ -37,7 +45,7 @@ a:hover , a:active {
 }
 
 .buttons-group > * {
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 .buttons-group > *:first-child {
   margin-left: 0px;
@@ -96,6 +104,7 @@ button:hover , button:active {
     0 0 2px rgba(0 , 0, 0 , 0.12),
     0 2px 4px rgba(0 , 0, 0 , 0.24);
   border: 0;
+  min-height: calc(1em + 50px);
   width: 75%;
   padding: 1rem;
 
