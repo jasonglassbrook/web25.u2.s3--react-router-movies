@@ -1,9 +1,9 @@
 /// external modules ///
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 /// internal modules ///
 import ButtonsGroup from './ButtonsGroup';
+import LinkButton from './LinkButton';
 
 /***************************************
   COMPONENTS
@@ -13,7 +13,7 @@ const SavedList = (props) => {
   return (
     <div className="saved-movies wrapper">
       <ButtonsGroup className="saved-movies">
-        <Link className="home-button" to='/'>Home</Link>
+        <LinkButton className="home-button" to='/'>Home</LinkButton>
       </ButtonsGroup>
       <div className="saved-movies content">
         <h3>Saved Movies:</h3>
