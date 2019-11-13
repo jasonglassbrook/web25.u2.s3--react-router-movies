@@ -25,12 +25,6 @@ const Movie = (props) => {
         console.error (error);
       });
   } , [id]);
-  
-  // Uncomment this only when you have moved on to the stretch goals
-  // const saveMovie = () => {
-  //   const addToSavedList = props.addToSavedList;
-  //   addToSavedList (movie)
-  // }
 
   /// this ///
   if (movie === undefined) {
