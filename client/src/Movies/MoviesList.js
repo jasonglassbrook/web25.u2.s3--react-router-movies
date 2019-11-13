@@ -41,7 +41,7 @@ const MoviesList = (props) => {
             movie={movie}
             buttons={{
               view : { use : true , to  : url },
-              save : { use : true , onClick : url },
+              save : { use : true , onClick : () => {props.save (movie)} },
             }}
           />
         );

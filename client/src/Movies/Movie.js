@@ -42,7 +42,7 @@ const Movie = (props) => {
       <MovieCard
         movie={movie}
         buttons={{
-          save : { use : true , onClick : url },
+          save : { use : true , onClick : () => {props.save (movie)} },
         }}
       />
     );

@@ -26,13 +26,13 @@ const App = (props) => {
       <Route
         exact path='/'
         render={(props) => (
-          <MoviesList {...props}/>
+          <MoviesList {...props} save={addToSavedList}/>
         )}
       />
       <Route
         path='/movies/:id'
         render={(props) => (
-          <Movie {...props}/>
+          <Movie {...props} save={addToSavedList}/>
         )}
       />
     </div>
