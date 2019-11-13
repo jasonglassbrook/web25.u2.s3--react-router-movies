@@ -1,6 +1,5 @@
 /// external modules ///
 import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 /// internal modules ///
@@ -33,13 +32,11 @@ const MoviesList = (props) => {
   return (
     <div className="movie-list">
       {movies.map ((movie) => (
-        <Link to={`/movies/${movie.id}`}>
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            url={`/movies/${movie.id}`}
-          />
-        </Link>
+        <MovieCard
+          key={movie.id}
+          movie={movie}
+          url={`/movies/${movie.id}`}
+        />
       ))}
     </div>
   );
