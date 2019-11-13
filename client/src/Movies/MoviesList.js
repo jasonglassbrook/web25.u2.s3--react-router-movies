@@ -11,7 +11,7 @@ import MovieCard from './MovieCard';
 const MoviesList = (props) => {
   /// state ///
   const [movies , setMovies] = React.useState ([]);
-  
+
   /// effects ///
   React.useEffect (() => {
     const getMovies = () => {
@@ -24,20 +24,28 @@ const MoviesList = (props) => {
           console.error ('Server Error' , error);
         });
     }
-    
+
     getMovies ();
   } , []);
-  
+
   /// thing ///
   return (
     <div className="movie-list">
-      {movies.map ((movie) => (
-        <MovieCard
-          key={movie.id}
-          movie={movie}
-          url={`/movies/${movie.id}`}
-        />
-      ))}
+      {movies.map ((movie) => {
+        const id = movie.id;
+        const url = `/movies/${id}`;
+
+        return (
+          <MovieCard
+            key={id}
+            movie={movie}
+            buttons={{
+              view : { use : true , to  : url },
+              save : { use : true , onClick : url },
+            }}
+          />
+        );
+      })}
     </div>
   );
 }

@@ -11,6 +11,7 @@ import MovieCard from './MovieCard';
 const Movie = (props) => {
   /// states ///
   const [id] = React.useState (props.match.params["id"]);
+  const [url] = React.useState (props.match.url);
   const [movie , setMovie] = React.useState ();
 
   /// effects ///
@@ -38,7 +39,12 @@ const Movie = (props) => {
     );
   } else {
     return (
-      <MovieCard movie={movie}/>
+      <MovieCard
+        movie={movie}
+        buttons={{
+          save : { use : true , onClick : url },
+        }}
+      />
     );
   }
 }
