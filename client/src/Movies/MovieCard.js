@@ -1,34 +1,43 @@
 /// external modules ///
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 /// internal modules ///
 import ButtonsGroup from './ButtonsGroup';
+import Button from './Button';
+import LinkButton from './LinkButton';
 
 /***************************************
   COMPONENTS
 ***************************************/
 const MovieCard = (props) => {
   /// states ///
-  const { title , director , metascore , stars } = props.movie;
+  const buttons = props.buttons;
+  const movie = props.movie;
 
+  /// thing ///
   return (
     <div className="movie-card wrapper">
       <ButtonsGroup className="movie-card">
-        <Link className="view-button" to='/'>View</Link>
-        <Link className="save-button" to='/'>Save</Link>
+        {(buttons.view.use)
+          ? (<LinkButton className="view-button" to={buttons.view.url}>View</LinkButton>)
+          : (<></>)
+        }
+        {(buttons.save.use)
+          ? (<Button className="save-button" onClick={buttons.save.onClick}>Save</Button>)
+          : (<></>)
+        }
       </ButtonsGroup>
       <div className="movie-card content">
-        <h2>{title}</h2>
+        <h2>{movie.title}</h2>
         <div className="movie-director">
-          Director: <em>{director}</em>
+          Director: <em>{movie.director}</em>
         </div>
         <div className="movie-metascore">
-          Metascore: <strong>{metascore}</strong>
+          Metascore: <strong>{movie.metascore}</strong>
         </div>
         <h3>Actors</h3>
   
-        {stars.map ((star) => (
+        {movie.stars.map ((star) => (
           <div key={star} className="movie-star">
             {star}
           </div>
