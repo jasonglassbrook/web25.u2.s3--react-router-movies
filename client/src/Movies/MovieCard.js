@@ -19,7 +19,7 @@ const MovieCard = (props) => {
     <div className="movie-card wrapper">
       <ButtonsGroup className="movie-card">
         {(buttons && buttons.view && buttons.view.use)
-          ? (<LinkButton className="view-button" to={buttons.view.url}>View</LinkButton>)
+          ? (<LinkButton className="view-button" to={buttons.view.to}>View</LinkButton>)
           : (<></>)
         }
         {(buttons && buttons.save && buttons.save.use)
