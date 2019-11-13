@@ -36,6 +36,10 @@ a:hover , a:active {
   align-items: stretch;
 }
 
+.buttons-group > * {
+  margin: 0px 10px;
+}
+
 .button {
   border: 1px solid Black;
   padding: 5px 10px;
