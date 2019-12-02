@@ -1,13 +1,31 @@
+/// external modules ///
 import React from 'react';
 
-const SavedList = props => (
-  <div className="saved-list">
-    <h3>Saved Movies:</h3>
-    {props.list.map(movie => (
-      <span className="saved-movie">{movie.title}</span>
-    ))}
-    <div className="home-button">Home</div>
-  </div>
-);
+/// internal modules ///
+import ButtonsGroup from './ButtonsGroup';
+import LinkButton from './LinkButton';
 
+/***************************************
+  COMPONENTS
+***************************************/
+const SavedList = (props) => {
+  /// this ///
+  return (
+    <div className="saved-movies wrapper">
+      <ButtonsGroup className="saved-movies">
+        <LinkButton className="home-button" to='/'>Home</LinkButton>
+      </ButtonsGroup>
+      <div className="saved-movies content">
+        <h3>Saved Movies:</h3>
+        <ul className="saved-movies list">
+          {props.list.map ((movie) => (
+            <li className="saved-movie">{movie.title}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+/**************************************/
 export default SavedList;

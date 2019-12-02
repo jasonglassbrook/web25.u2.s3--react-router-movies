@@ -1,7 +1,21 @@
+/// external modules ///
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import './index.css';
+/// internal modules ///
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/// styles ///
+import 'reset-css/reset.css';
+import 'normalize-css/normalize.css';
+import './styles/index.css';
+
+/***************************************
+  APP
+***************************************/
+ReactDOM.render (
+  <Router>
+    <App/>
+  </Router>
+, document.getElementById ('root'));

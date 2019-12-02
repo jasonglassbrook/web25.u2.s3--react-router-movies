@@ -1,0 +1,152 @@
+* , *:before , *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+/***************************************
+  LINKS
+***************************************/
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+a:link , a:visited {
+  text-decoration: none;
+}
+
+a:hover , a:active {
+  text-decoration: underline;
+}
+
+/***************************************
+  BUTTONS
+***************************************/
+
+.buttons-group {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.buttons-group > * {
+  margin: 0px 5px;
+}
+.buttons-group > *:first-child {
+  margin-left: 0px;
+}
+.buttons-group > *:last-child {
+  margin-right: 0px;
+}
+
+button {
+  border-radius: 9999px;
+  border: 1px solid Black;
+  padding: 5px 10px;
+
+  color: Black;
+  transition: transform 0.2s;
+}
+
+button:hover , button:active {
+  transform: scale(1.05);
+}
+
+.home-button {
+  background-color: LightSkyBlue;
+}
+
+.home-button:hover , .home-button:active {
+  background-color: DeepSkyBlue;
+}
+
+.view-button {
+  background-color: LightCoral;
+}
+
+.view-button:hover , .view-button:active {
+  background-color: OrangeRed;
+}
+
+.save-button {
+  background-color: LightGreen;
+}
+
+.save-button:hover , .save-button:active {
+  background-color: MediumSeaGreen;
+}
+
+/***************************************
+  SAVED MOVIES
+***************************************/
+
+.saved-movies.wrapper {
+  position: relative;
+  
+  margin: 1rem auto;
+  box-shadow:
+    0 -1px 0 #e0e0e0,
+    0 0 2px rgba(0 , 0, 0 , 0.12),
+    0 2px 4px rgba(0 , 0, 0 , 0.24);
+  border: 0;
+  min-height: calc(1em + 2px + 10px + 40px);
+  width: 75%;
+  padding: 1rem;
+
+  background-color: #fff;
+}
+
+.saved-movies.content h3 {
+  margin-right: 10px;
+}
+
+.saved-movies.list {
+  display: flex;
+  align-items: flex-start;
+  /* justify-content: space-between; */
+}
+
+.saved-movie {
+  margin: 0 10px;
+}
+
+.saved-active {
+  color: blue;
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+/***************************************
+  MOVIE CARD
+***************************************/
+
+.movie-card.wrapper {
+  position: relative;
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 -1px 0 #e0e0e0 , 0 0 2px rgba(0 , 0, 0 , 0.12),
+    0 2px 4px rgba(0 , 0, 0 , 0.24);
+  padding: 1rem;
+  position: relative;
+  margin: 1rem auto;
+}
+
+.movie-director {
+  padding: 4px 0;
+  font-size: 0.8rem;
+}
